@@ -1,0 +1,709 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/*  background-color: rgb(33, 145, 236);*/
+
+
+
+/*TEST STYLE*/
+/*
+.testdiv{
+  display: grid;
+  margin-top: 33em;
+}
+
+.testInput{
+  
+  width: 33em;
+  height: 9em;
+  border: solid 3px crimson;
+}
+*/
+
+
+
+.landingPageRow > Link{
+  text-decoration: none;
+}
+
+*{
+  font-size: 5px;
+  box-sizing: 0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Kanit', sans-serif;
+}
+
+
+/* ScrollBar Style */
+::-webkit-scrollbar {
+  width: 3em;
+}
+
+::-webkit-scrollbar-track {
+  background: black; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+::-webkit-scrollbar-track:hover{
+  background-color: rgb(33, 145, 236);
+}
+
+/***********Checker Style************/
+
+.form-control {
+  font-size: 2rem;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: rgb(33, 145, 236);
+  margin: 0;
+  position: absolute;
+}
+
+
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: rgb(33, 145, 236);
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  /*border: 0.15em solid currentColor;*/
+  border-radius: 0em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+  box-shadow: 1.8px 2.9px 0 0 black;
+}
+
+.form-control + .form-control {
+  margin-top: 1em;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 0.5em 0.5em var(--form-control-color);
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  background-color: rgb(0, 0, 0);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+
+
+/********Homepage Style************/
+
+.containerStyle {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.firstRow{
+  width: fit-content;
+  
+}
+
+.firstColumnStyle{
+  display: flex;
+  justify-content: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10em;
+  font-weight: 400;
+  transition: 500ms;
+  animation: homepagemove 2.5s;
+}
+
+.secondColumnStyle{
+  font-size: 3.5em;
+  font-weight: 500;
+  padding-right: 0.19em;
+}
+
+
+.secondRow{
+  display: flex;
+  width: 55em;
+  justify-content: space-between;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+@keyframes homepagemove {
+  0% {font-size: 10em;}
+  50% { transform: scale(1.2, 1.4)}
+  100% {font-size: 10em;}
+}
+
+
+/***************lANDINGPAGE STYLE********/
+
+.landingPageContainer{
+  width: 100%;
+  height: 70vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.landingPageRow{
+  margin-top: 2em;
+}
+
+.landingPageFirstRow{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 5em;
+  translate: scale(1, 3.5);
+}
+
+#landingPageTogether{
+  border: solid 2px black;
+  box-shadow: 2px 4px 1px 0 black;
+ font-size: 3em;
+ width: 13em;
+ height: 3em;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.landingPageSecondRow{
+  background-color: rgb(33, 145, 236);
+  color: whitesmoke;
+}
+
+#landingPageTogether:hover{
+  cursor: pointer;
+}
+
+.footer{
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+}
+
+.footer:hover{
+  cursor: pointer;
+}
+
+.footer>div{
+  font-size: 3em;
+  display: flex;
+  align-self: center;
+  margin-left: 4.5em;
+}
+
+footer > div > img{
+  font-size: 7em;
+  padding: 0 0.1em;
+}
+
+
+/**********CreateGame Style ***********/
+
+.createGameContainer{
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  gap: 0.5em;
+  justify-items: center;
+  align-items: center;
+}
+
+.rowOneCreateGame > i{
+  font-size: 3em;
+  margin-top: 2em;
+  position: absolute;
+  left: 5em;
+}
+
+.rowOneCreateGame:hover{
+  cursor: pointer;
+}
+
+.rowTwoCreateGame{
+  font-size: 3em;
+  margin-top: 3em;
+}
+
+
+.rowThreeCreateGame, .rowFourPlayGame, .rowFourScoreGame{
+  position: relative;
+  height: 65em;
+  overflow-y: scroll;
+}
+
+.rowThreeCreateGame > div{
+ border: 2px solid black;
+ height: 4em;
+ padding: 2em;
+ margin: 3.5em;
+ width: 55em;
+ display: flex;
+ justify-content: flex-start;
+}
+
+.rowThreeCreateGame > div > span{
+  font-size: 2.6em;
+  margin-left: 3.5em;
+}
+
+
+.rowFourCreateGame{
+  font-size: 3em;
+}
+
+
+.rowFiveCreateGame{
+  display: flex;
+  justify-content: space-around;
+  width: 55em;
+}
+
+.rowFiveCreateGame > div > span{
+  font-size: 3em;
+  font-weight: 400;
+}
+
+.rowFiveCreateGame > div{
+  margin-top: 2em;
+  border: black solid 0.5em;
+  width: 6em;
+  height: 6em;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  align-content: center;
+  background-color: rgb(33, 145, 236);
+  box-shadow: 0.6em 0.5em 0 0 black;
+  color: white;
+}
+
+.rowFiveCreateGame > div:hover{
+  cursor: pointer;
+}
+
+
+.rowSixCreateGame, .rowSixScoreGame{
+  margin-top: 7em;
+  border: 2px solid black;
+  width: 50em;
+  height: 9.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: whitesmoke;
+  box-shadow: 0.6em 0.5em 0 0 rgb(33, 145, 236);
+}
+
+.rowSixCreateGame > span, .rowSixScoreGame > span{
+  font-size: 3.5em;
+}
+
+.rowSixCreateGame:hover{
+  cursor: pointer;
+}
+
+
+.firstCheckCreateGame{
+  top: 3.4em;
+  left: 5em;
+}
+
+.secondCheckCreateGame{
+  top: 9.5em;
+  left: 5em;
+}
+
+.thirdCheckCreateGame{
+  top: 15.7em;
+  left: 5em;
+}
+
+.fourCheckCreateGame{
+  top: 21.7em;
+  left: 5em;
+}
+
+.fiveCheckCreateGame{
+  top: 27.9em;
+  left: 5em;
+}
+
+.sixCheckCreateGame{
+  top: 34.2em;
+  left: 5em;
+}
+
+.sevenCheckCreateGame{
+  top: 40.3em;
+  left: 5em;
+}
+
+
+/* JOIN-GAME Style*/
+
+.joinGameContainer{
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  gap: 0.5em;
+  justify-items: center;
+  align-items: center;
+}
+
+.rowOneJoinGame{
+  margin-top: 20em;
+  position: relative;
+}
+
+
+.rowOneJoinGameInputDiv > input{
+  border: solid 0.18em rgb(12, 12, 12);
+  width: 10em;
+  height: 1.5em;
+  font-size: 3em;
+  padding-left: 0.18em;
+}
+
+/*
+.rowOneJoinGame{
+  border: solid 0.5em rgb(12, 12, 12);
+  width: 20em;
+  height: 5em;
+  margin-top: 20em;
+  position: relative;
+}
+
+.rowOneJoinGame > div > input{
+  border: 2px solid black;
+  height: 1.6em;
+  padding: 0.4em;
+  padding-left: 1.4em;
+  margin: 0.9em;
+  font-size: 3.5em;
+  width: 14.3em;
+  display: flex;
+  justify-content: flex-start;
+}
+*/
+
+.rowOneJoinGame > div > span{
+  font-size: 3em;
+  margin-left: 0.3em;
+}
+
+.rowOneJoinGamePencilIcon > i{
+  font-size: 3em;
+  color: whitesmoke;
+}
+
+.rowOneJoinGamePencilIcon{
+  border: solid 2px rgb(3, 3, 3);
+  width: 4em;
+  height: 5em;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.6em 0.5em 0 0 rgb(33, 145, 236);
+  position: absolute;
+  top: -0.5em;
+  left: 27em;
+}
+
+.rowTwoJoinGame > span {
+  font-size: 3em;
+}
+
+.rowTwoJoinGame{
+  margin: 2em;
+}
+
+.rowThreeJoinGame{
+  width: 60em;
+  height: 9em;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.rowThreeJoinGameSpan{
+  font-size: 3em;
+  border: solid 3px rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12em;
+  height: 3em;
+  overflow-x: hidden;
+  padding-left: 0.4em;
+}
+
+.rowThreeJoinGameSpan > span{
+  font-size: 2em;
+}
+
+.rowThreeJoinGameCodeInput > input{
+  font-size: 3em;
+  border: solid 3px rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  width: 12em;
+  height: 3em;
+  overflow-x: hidden;
+  padding-left: 0.4em;
+}
+
+.joinGameCopyIconDiv{
+  width: 20em;
+  height: 9em;
+  position: absolute;
+  left: 38em;
+  top: -0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.joinGameCopyIconDiv:hover{
+  cursor: pointer;
+}
+
+.joinGameCopyIcon1, .joinGameCopyIcon2{
+  border: solid 3px black;
+  height: 5em;
+  width: 4em;
+}
+
+.joinGameCopyIcon2{
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 6em;
+  top: 2.7em;
+  box-shadow: inset 0.67em -0.67em 0 0 rgb(10, 10, 10);
+  border: none;
+  z-index: -1;
+  height: 6em;
+}
+
+.joinGameCopyIcon1{
+  background-color: rgb(255, 255, 255);
+}
+
+.rowFourJoinGame{
+  margin: 2em;
+}
+
+.rowFourJoinGame > span{
+  font-size: 3em;
+}
+
+.rowFiveJoinGame{
+  margin: em;
+}
+
+.rowFiveJoinGame > div{
+  height: 4em;
+  padding: 2em;
+  margin: 1em;
+  width: 55em;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.rowFiveJoinGame > div > span{
+  font-size: 3em;
+}
+
+.onlyCheckJoinGame{
+  position: relative;
+  top: 1.6em;
+  left: 5.7em;
+}
+
+
+
+
+/*Play Game Style*/
+.rowOnePlayGame > i{
+  font-size: 3em;
+  margin-top: 2em;
+  position: absolute;
+  right: 5em;
+}
+
+.rowTwoPlayGame, .rowThreePlayGame{
+  width: 56em;
+  margin-top: 15em;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 4em;
+}
+
+.rowTwoPlayGame > div > span{
+  font-size: 3em;
+  color: #555;
+}
+
+.rowThreePlayGame{
+  margin-top: 0.5em;
+}
+
+.rowThreePlayGame > div > span{
+  font-size: 3em;
+  color: rgb(0, 0, 0);
+}
+
+.rowFourPlayGame > div > input{
+  border: 2px solid black;
+  height: 1.6em;
+  padding: 0.4em;
+  padding-left: 1.4em;
+  margin: 0.9em;
+  font-size: 3.5em;
+  width: 14.3em;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.rowFourPlayGame > div > input::placeholder {
+  font-size: 0.9em;
+}
+
+
+
+/*  SCORE GAME*/
+
+.rowTwoScoreGame{
+  width: 56em;
+  margin-top: 15em;
+  display: flex;
+  justify-content: center;
+  margin-right: 4em;
+  margin-bottom: 2em;
+}
+
+.scoreGameAlphabet > span{
+
+  font-size: 3em;
+}
+
+.rowThreeScoreGame{
+  display: flex;
+  justify-content:center;
+  width: 55em;
+}
+
+
+.rowThreeScoreGame > div > span{
+  font-size: 3em;
+}
+
+.rowThreeScoreGame > div{
+  margin: 0.3em;
+  margin-bottom: 0;
+}
+
+.scoreGameUsername{
+  color: rgb(33, 145, 236);
+}
+
+
+.rowFourScoreGame > div{
+  border: 2px solid black;
+  height: 1.6em;
+  padding: 0.4em;
+  padding-left: 1.4em;
+  margin: 0.9em;
+  font-size: 3.5em;
+  width: 14.3em;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rowFourScoreGame > div >span{
+  font-size: 0.8em;
+}
+
+#minusScoreGame, #plusScoreGame{
+  position: absolute;
+  font-size: 1em;
+  border: solid 2px black;
+  width: 0.9em;
+  height: 0.9em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#plusScoreGame{
+  left: 12.6em;
+  box-shadow: 0.15em 0.2em 0 0 rgb(0, 0, 0);
+  background-color: rgb(33, 145, 236);
+  color: aliceblue;
+}
+
+#plusScoreGame:hover{
+  cursor: pointer;
+  color: black;
+}
+
+#minusScoreGame{
+  left: 5em;
+  cursor: pointer;
+}
+
+.rowFiveScoreGame{
+  margin-top: 2em;
+  
+}
+
+.rowFiveScoreGame > div > span{
+  font-size: 4.4em;
+  font-weight: 400;
+}
+
+.totalScoreSpan{
+  margin-right: 0.5em;
+}
+
+.rowSixScoreGame{
+  margin-top: 2.5em;
+}
+
+.digitSpan{
+  color: rgb(33, 145, 236);
+}
+
+
+.ScoreGameAnswer{
+  color: rgb(33, 145, 236);
+}
