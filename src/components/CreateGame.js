@@ -17,7 +17,9 @@ const CreateGame = () => {
   return (
     <Container className='createGameContainer' fluid>
       <Row>
+        <Link to={'Landing'} style={styledLink1}>
         <Col className='rowOneCreateGame'><i className="fa-solid fa-arrow-left"></i></Col>
+        </Link>
       </Row>
       <Row >
         <Col className='rowTwoCreateGame'>Select Categories</Col>

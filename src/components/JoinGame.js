@@ -52,7 +52,9 @@ useEffect(
   return (
     <Container className='joinGameContainer' fluid>
       <Row>
+      <Link to={'CreateGame'} style={styledLink1}>
         <Col className='rowOneCreateGame'><i className="fa-solid fa-arrow-left"></i></Col>
+        </Link>
       </Row>
       <Row>
         <Col className='rowOneJoinGame'><div>
