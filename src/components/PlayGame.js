@@ -3,10 +3,6 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
-import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
-import { Route } from 'react-router-dom/cjs/react-router-dom.min';
-import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
-import Landingpage from './Landingpage';
 //import ScoreGame from './ScoreGame';
 
 
@@ -27,15 +23,8 @@ const alphabet = generateRandomAlphabet();
 const alertUser = () => {
     let text = "Do you want to quit the game?\n\nYou'd be redirected.";
     if (window.confirm(text) === true) {
-       
-        
-        <Switch>
-            <Redirect exact from="/PlayGame" to="/landing" />
-            <Route path="/landing">
-                <Landingpage />
-            </Route>
-        </Switch>
-         console.log('true was clicked');
+        window.location.href = '/CreateGame'
+         //console.log('true was clicked');
     } else {
         console.log('false was clicked');
     }
